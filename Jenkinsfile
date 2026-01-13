@@ -18,7 +18,7 @@ pipeline{
       steps{
         echo 'validating project readiness'
         bat '''
-        findstr READ=true check.txt >nul
+        findstr READY=true check.txt >nul
         if errorlevel 1 (
             echo validation failed
             exit 1
